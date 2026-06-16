@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  :root{--fg:#1b1b1b;--muted:#6a6a6a;--bg:#fbfaf7;--accent:#7a1f1f;--rule:#e6e2da;--code:#f2efe9;}
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--fg);
+    font-family:"Iowan Old Style",Palatino,"Palatino Linotype",Georgia,serif;
+    font-size:19px;line-height:1.72;}
+  .wrap{max-width:740px;margin:0 auto;padding:64px 28px 120px;}
+  h1,h2,h3,h4{line-height:1.25;font-weight:650;letter-spacing:-0.01em;}
+  h1{font-size:2.1rem;margin:0 0 .25em;}
+  h2{font-size:1.45rem;margin:2.4em 0 .6em;padding-top:.5em;border-top:1px solid var(--rule);}
+  h3{font-size:1.15rem;margin:1.8em 0 .4em;}
+  p{margin:0 0 1.1em;}
+  a{color:var(--accent);text-underline-offset:2px;}
+  strong{font-weight:680;}
+  em{color:#333;}
+  blockquote{margin:1.4em 0;padding:.4em 0 .4em 1.2em;border-left:3px solid var(--accent);color:#2a2a2a;}
+  blockquote p{margin:.3em 0;}
+  ul,ol{margin:0 0 1.1em;padding-left:1.4em;}
+  li{margin:.3em 0;}
+  hr{border:0;border-top:1px solid var(--rule);margin:2.6em 0;}
+  code{font-family:"SF Mono",ui-monospace,Menlo,monospace;font-size:.86em;background:var(--code);padding:.12em .4em;border-radius:4px;}
+  pre{background:var(--code);padding:16px 18px;border-radius:8px;overflow:auto;}
+  pre code{background:none;padding:0;}
+  table{border-collapse:collapse;width:100%;margin:1.4em 0;font-size:.92em;}
+  th,td{border:1px solid var(--rule);padding:.5em .7em;text-align:left;vertical-align:top;}
+  th{background:#f1ede5;font-weight:650;}
+  .meta{color:var(--muted);font-size:.8rem;margin-top:54px;padding-top:16px;border-top:1px solid var(--rule);}
+  @media (max-width:600px){body{font-size:17px}.wrap{padding:40px 18px 80px}}
+  @media print{body{background:#fff}.wrap{max-width:none}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+<h1 id="claude-code-failover-cockpit">Claude Code Failover Cockpit</h1>
+<p><strong>Keep one cockpit. Swap the engine underneath.</strong></p>
+<p>A practical, anti-lock-in setup for running <a href="https://www.anthropic.com/claude-code">Claude Code</a> as your single coding cockpit while being able to fall back, on demand or automatically, to other model backends, so a provider outage or an exhausted plan never stops your work.</p>
+<p>The cascade, from default to last resort:</p>
+<pre><code>Anthropic subscription  →  Anthropic on AWS Bedrock  →  cheaper API (DeepSeek / GPT / Gemini)  →  fully-local model  →  sibling CLIs</code></pre>
+<p>Levels 1 to 4 keep your <strong>exact environment</strong> (your skills, MCP servers, agents, project rules). Only the model behind the API changes.</p>
+<hr />
+<h2 id="the-one-idea-most-people-miss-harness--model">The one idea most people miss: harness ≠ model</h2>
+<p>An agentic coding tool has two separate layers:</p>
+<ul>
+<li><strong>The harness</strong> — the CLI itself (Claude Code), with your skills, MCP servers, subagents, hooks, and project instructions.</li>
+<li><strong>The model</strong> — the LLM that answers the API calls.</li>
+</ul>
+<p>Claude Code talks to a model over the Anthropic Messages API. If you redirect that API endpoint (<code>ANTHROPIC_BASE_URL</code>), you keep the <strong>entire harness</strong> and only change the brain behind it. That is the whole trick.</p>
+<h3 id="the-wall-subscription--api">The wall: subscription ≠ API</h3>
+<p>A <strong>consumer subscription</strong> (Claude Pro/Max, ChatGPT Plus/Pro, Gemini/AI subscriptions) is locked to its vendor's own apps. You generally <strong>cannot</strong> pipe a subscription into a third-party harness. What you <em>can</em> feed into a harness is:</p>
+<ul>
+<li>a <strong>metered API key</strong> (pay per token),</li>
+<li>an <strong>aggregator</strong> like OpenRouter (one key, many models, metered),</li>
+<li>a <strong>cloud gateway</strong> you already pay for (e.g. AWS Bedrock),</li>
+<li>a <strong>local model</strong> on your own hardware (free, works offline).</li>
+</ul>
+<p>So "same environment + my competitor subscription" is impossible. "Same environment + a different model via API/local" is exactly what this repo sets up.</p>
+<blockquote>
+<p>Note on terms of service: redirecting the official Claude Code CLI to a non-Anthropic model via <code>ANTHROPIC_BASE_URL</code> is the documented "LLM gateway" pattern. What vendors prohibit is using a subscription's OAuth token <em>inside a third-party tool</em>. Use metered API keys, a cloud gateway, or local models for the alternative backends, never your subscription's OAuth.</p>
+</blockquote>
+<hr />
+<h2 id="the-cascade">The cascade</h2>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>When</th>
+<th>What runs</th>
+<th>Same env?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Normal</td>
+<td>Claude Code on your Anthropic subscription</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Anthropic API down (auto)</td>
+<td>Claude on AWS Bedrock</td>
+<td>yes (still Claude)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bedrock too costly / you want cheaper (manual)</td>
+<td>DeepSeek / GPT / Gemini via a router + OpenRouter</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Fully offline</td>
+<td>A local model via Ollama, sized per machine</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>4</td>
+<td>You want another paid subscription</td>
+<td>The vendor's own CLI (e.g. Codex for ChatGPT)</td>
+<td>no (different harness)</td>
+</tr>
+</tbody>
+</table>
+<p>Levels 0 to 3 are one cockpit. Level 4 is a sibling cockpit, by vendor constraint.</p>
+<hr />
+<h2 id="setup">Setup</h2>
+<h3 id="level-1--automatic-bedrock-fallback">Level 1 — automatic Bedrock fallback</h3>
+<p>Claude Code natively supports AWS Bedrock via <code>CLAUDE_CODE_USE_BEDROCK=1</code> plus a configured AWS profile and region. The pattern: wrap the <code>claude</code> command so it pings the Anthropic API on launch; if it is up, use the subscription; if it is down, export the Bedrock variables and continue on the same models. A small launchd/cron watchdog can flip sessions automatically and notify you.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Force Bedrock for one session (requires an AWS profile with Bedrock model access):</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="va">CLAUDE_CODE_USE_BEDROCK</span><span class="op">=</span>1 <span class="va">AWS_PROFILE</span><span class="op">=</span>your-bedrock-profile <span class="va">AWS_REGION</span><span class="op">=</span>us-east-1 <span class="dt">\</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="va">ANTHROPIC_MODEL</span><span class="op">=</span>us.anthropic.claude-... <span class="ex">claude</span></span></code></pre></div>
+<h3 id="level-2--cheaper-apis-via-a-router">Level 2 — cheaper APIs via a router</h3>
+<p>Use <a href="https://github.com/musistudio/claude-code-router"><code>claude-code-router</code></a> (MIT) as a local proxy. It listens on <code>127.0.0.1:3456</code>, accepts the Anthropic format, and forwards to any provider via transformers. One OpenRouter key gives you DeepSeek, GPT, Gemini and Claude-via-API.</p>
+<p>See <a href="examples/claude-code-router.config.example.json"><code>examples/claude-code-router.config.example.json</code></a>. The API key is read from an environment variable, never hard-coded. Then point Claude Code at the proxy:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">ANTHROPIC_BASE_URL</span><span class="op">=</span>http://127.0.0.1:3456 <span class="va">ANTHROPIC_API_KEY</span><span class="op">=</span>anything <span class="ex">claude</span></span></code></pre></div>
+<p>Switch the active model live with <code>/model openrouter,openai/gpt-5</code> inside the session, or change <code>Router.default</code> in the config.</p>
+<h3 id="level-3--fully-offline-local-model-per-machine">Level 3 — fully offline, local model per machine</h3>
+<p>When there is no network at all, run a local model with <a href="https://ollama.com">Ollama</a>, which speaks the Anthropic Messages API natively. The included <a href="examples/claude-offline.sh"><code>examples/claude-offline.sh</code></a> detects the machine, picks a model sized for it (small on a laptop, large on a GPU box), starts Ollama if needed, and launches Claude Code against <code>localhost</code>.</p>
+<p>A useful property: when you are truly offline, the subscription's OAuth cannot authenticate, so Claude Code is forced onto the local endpoint.</p>
+<h3 id="level-4--a-different-subscription-in-its-own-cli">Level 4 — a different subscription, in its own CLI</h3>
+<p>To actually spend a ChatGPT or Gemini subscription, use that vendor's own agentic CLI (Codex CLI for OpenAI, the Gemini tooling for Google). These are separate harnesses with their own config, skills and MCP, maintained in parallel. A cross-CLI orchestrator (e.g. AWS Labs' CLI Agent Orchestrator) can drive several of them together.</p>
+<h3 id="convenience-functions">Convenience functions</h3>
+<p><a href="examples/failover.zsh"><code>examples/failover.zsh</code></a> wires it together: <code>cc</code> (router), <code>ai-gpt</code> / <code>ai-gemini</code> / <code>ai-deepseek</code> (switch model), <code>cl</code> (offline). Source it from your shell rc.</p>
+<hr />
+<h2 id="files">Files</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>examples/claude-code-router.config.example.json</code></td>
+<td>Router config, key from env, placeholders only</td>
+</tr>
+<tr>
+<td><code>examples/failover.zsh</code></td>
+<td>Shell functions: <code>cc</code>, <code>ai-*</code>, <code>cl</code></td>
+</tr>
+<tr>
+<td><code>examples/claude-offline.sh</code></td>
+<td>Machine-aware offline launcher (Ollama)</td>
+</tr>
+</tbody>
+</table>
+<p>No secrets, keys, account IDs, IP addresses or hostnames are included. Copy the examples and fill in your own.</p>
+<hr />
+<h2 id="license--citation">License &amp; citation</h2>
+<ul>
+<li><strong>Text and documentation:</strong> <a href="LICENSE.md">CC BY-NC-ND 4.0</a></li>
+<li><strong>Code and configuration examples:</strong> <a href="LICENSE.md">PolyForm Noncommercial 1.0.0</a></li>
+</ul>
+<p>See <a href="LICENSE.md"><code>LICENSE.md</code></a> for the canonical terms and <a href="CITATION.cff"><code>CITATION.cff</code></a> to cite this work.</p>
+<p>Authored by Ismaël Joffroy Chandoutis.</p>
+<div class="meta">Genere depuis README.md — 2026-06-16 04:45</div></div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+node_modules/
+*.local
+.DS_Store
+config.json
+.env
+*.key
+secrets*

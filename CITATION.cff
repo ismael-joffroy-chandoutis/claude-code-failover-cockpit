@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Claude Code Failover Cockpit"
+abstract: >-
+  A resilient, anti-lock-in setup for running Claude Code as a single coding
+  cockpit while falling back across model backends (Anthropic, AWS Bedrock,
+  cheaper APIs via OpenRouter, and fully-local models) without changing the
+  working environment.
+type: software
+authors:
+  - family-names: "Joffroy Chandoutis"
+    given-names: "Ismaël"
+version: "0.1.0"
+date-released: "2026-06-16"
+license: "PolyForm-Noncommercial-1.0.0"
+keywords:
+  - claude-code
+  - llm
+  - failover
+  - anti-lock-in
+  - ollama
+  - openrouter
+  - bedrock
