@@ -112,3 +112,5 @@ No secrets, keys, account IDs, IP addresses or hostnames are included. Copy the 
 See [`LICENSE.md`](LICENSE.md) for the canonical terms and [`CITATION.cff`](CITATION.cff) to cite this work.
 
 Authored by Ismaël Joffroy Chandoutis.
+
+By [Ismaël Joffroy Chandoutis](https://ismaeljoffroychandoutis.com).
