@@ -1,3 +1,5 @@
+**English** · [Français](README.fr.md)
+
 # Claude Code Failover Cockpit
 
 **Keep one cockpit. Swap the engine underneath.**
